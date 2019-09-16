@@ -4,6 +4,19 @@ A pure OCaml Gameboy emulator
 This project is a work in progress Gameboy emulator written in pure OCaml.
 The goal is to provide a full Gameboy + Gameboy Color emulator with support for most cartridges kind out there, and experiment with a few different frontends.
 
+## Build/run instructions
+
+- To build from source: dune build sdl/main.exe
+- To run: _build/default/sdl/main.exe <gameboy file (.gb)>
+
+## Dependencies
+
+- OCaml version 4.04.2 or later
+- tsdl
+- bos
+- cmdliner
+- hex
+
 ## Current progress
 
 Currently most of the core logic is implemented, minus a few bugs, and simple games can be played. (Tetris and Tobu Tobu Girl are good examples)
