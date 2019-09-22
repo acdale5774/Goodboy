@@ -24,8 +24,8 @@ let up = 2
 let down = 3
 
 let make () = {
-  control = Uint8.chr 0b11000000;
-  arrows = Uint8.chr 0b1111;
+  control = Uint8.chr 0b11000000; (* '\000' *)
+  arrows = Uint8.chr 0b1111; (* '\015' *)
   buttons =  Uint8.chr 0b1111; }
 
 let write t b =

@@ -12,8 +12,9 @@ let one = Char.unsafe_chr 1
 
 let max_int = 255
 
-let code = Char.code
-let chr = Char.unsafe_chr
+let code = Char.code (* returns ASCII code of the argument *)
+let chr = Char.unsafe_chr (* returns the char with the given ASCII code, 
+                                doesn't check if arg is in range *)
 
 let add x y = (code x + code y) land max_int |> chr
 let sub x y = (code x - code y) land max_int |> chr
