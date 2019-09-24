@@ -9,15 +9,16 @@ open Tsdl
 open Result
 
 type t = {
-  win : Tsdl.Sdl.window;
+  win : Tsdl.Sdl.window; (* main window *)
   event : Tsdl.Sdl.event;
   mutable joypad_changed : bool;
   mutable quit : bool;
   mutable last_tick : Int32.t;
 }
 
+(* destroys the main window and cleans up initialized subsystems *)
 let teardown t =
-  Sdl.destroy_window t.win;
+  Sdl.destroy_window t.win; 
   Sdl.quit ();
   exit 0
 
